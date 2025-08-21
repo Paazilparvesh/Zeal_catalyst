@@ -14,7 +14,7 @@ function Proven() {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-          backgroundImage: image2, // your circle bg
+          backgroundImage: `url(${image2})`, // your circle bg
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

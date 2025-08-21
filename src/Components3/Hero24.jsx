@@ -1,5 +1,5 @@
 import React from "react";
-import man from "/src/assets/man.png"
+import man from "/src/assets/man.png";
 function Choose() {
   return (
     <div style={{ height: 100 }}>
@@ -8,7 +8,7 @@ function Choose() {
       <div
         className="d-flex flex-column align-items-center"
         style={{
-          backgroundImage: ,
+          backgroundImage: `url(${man})`,
           backgroundSize: "fit",
           backgroundPosition: "center",
           height: "820px", // ✅ image background height
@@ -16,18 +16,6 @@ function Choose() {
           padding: "40px 20px",
         }}
       >
-        {/* Title */}
-        {/* <h1
-          className="fw-bold text-white text-center"
-          style={{
-            fontFamily: "'Be Vietnam Pro', sans-serif",
-            fontSize: "38px",
-            marginBottom: "auto", // push content down
-          }}
-        >
-          WHY BUSINESSES CHOOSE US
-        </h1> */}
-
         {/* Boxes at bottom */}
         <div
           className="row justify-content-center g-4 w-100"
