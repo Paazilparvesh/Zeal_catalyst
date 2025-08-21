@@ -119,6 +119,11 @@ function Navbar() {
                 Zeal LMS
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/counsel" className={getNavLinkClass}>
+                Zeal Counseling
+              </NavLink>
+            </li>
             {/* Dropdown Menu Item */}
             {/* <li
               className="relative"
