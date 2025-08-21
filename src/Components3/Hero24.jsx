@@ -1,4 +1,5 @@
 import React from "react";
+import man from "/src/assets/man.png"
 function Choose() {
   return (
     <div style={{ height: 100 }}>
@@ -7,7 +8,7 @@ function Choose() {
       <div
         className="d-flex flex-column align-items-center"
         style={{
-          backgroundImage: "url('/home/man.png')",
+          backgroundImage: ,
           backgroundSize: "fit",
           backgroundPosition: "center",
           height: "820px", // ✅ image background height

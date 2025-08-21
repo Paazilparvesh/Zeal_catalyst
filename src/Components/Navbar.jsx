@@ -104,9 +104,23 @@ function Navbar() {
                 Courses
               </NavLink>
             </li> */}
-
+            <li>
+              <NavLink to="/" className={getNavLinkClass}>
+                AI Product
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/assessment" className={getNavLinkClass}>
+                Zeal Assessment
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/lms" className={getNavLinkClass}>
+                Zeal LMS
+              </NavLink>
+            </li>
             {/* Dropdown Menu Item */}
-            <li
+            {/* <li
               className="relative"
               ref={dropdownRef}
               onMouseEnter={() => setIsDropdownOpen(true)}
@@ -150,7 +164,7 @@ function Navbar() {
                   </NavLink>
                 </div>
               </div>
-            </li>
+            </li> */}
 
             {/* <li>
               <NavLink to="/about" className={getNavLinkClass}>
@@ -248,11 +262,9 @@ function Navbar() {
 
 export default Navbar;
 
-
 // import React from "react";
 // import { Link, useNavigate } from "react-router-dom";
 // import logo from "/src/assets/logo.png"; // Adjust the path as necessary
-
 
 // export default function Navbar() {
 //   const navigate = useNavigate();
