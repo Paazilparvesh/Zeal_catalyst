@@ -1,5 +1,6 @@
 import React from "react";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Page from "./Components/Page";
 import { Page2 } from "./Components2/Page2";
@@ -11,8 +12,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Page />}></Route>
-          <Route path="/assesment" element={<Page2 />}></Route>
-          <Route path="/3" element={<Page3 />}></Route>
+          <Route path="/assessment" element={<Page2 />}></Route>
+          <Route path="/lms" element={<Page3 />}></Route>
         </Routes>
       </BrowserRouter>
     </>

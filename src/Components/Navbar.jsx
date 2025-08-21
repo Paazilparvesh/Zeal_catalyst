@@ -5,6 +5,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import logo from "/src/assets/logo.png"; // Adjust the path as necessary
 
 // Simple Chevron Down Icon for the dropdown
 const ChevronDownIcon = ({ className }) => (
@@ -53,9 +54,7 @@ function Navbar() {
     <nav className="bg-white shadow-sm py-3 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold text-blue-600">
-          LOGO
-        </a>
+        <img src={logo} alt="" />
 
         {/* Mobile Menu Toggler & Login Button */}
         <div className="flex items-center lg:hidden">
@@ -95,16 +94,16 @@ function Navbar() {
         {/* Desktop Navigation Links */}
         <div className={`hidden lg:flex lg:items-center lg:space-x-4`}>
           <ul className="flex items-center space-x-5">
-            <li>
+            {/* <li>
               <NavLink to="/" className={getNavLinkClass}>
                 Home
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink to="/course" className={getNavLinkClass}>
                 Courses
               </NavLink>
-            </li>
+            </li> */}
 
             {/* Dropdown Menu Item */}
             <li
@@ -132,55 +131,37 @@ function Navbar() {
               >
                 <div className="py-1" role="none">
                   <NavLink
-                    to="/services/web-dev"
+                    to="/"
                     className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                   >
-                    Web Development
+                    AI Product
                   </NavLink>
                   <NavLink
-                    to="/services/mobile-app"
+                    to="/assessment"
                     className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                   >
-                    Mobile App Dev
+                    Zeal Assessment
                   </NavLink>
                   <NavLink
-                    to="/services/ui-ux"
+                    to="/lms"
                     className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                   >
-                    UI/UX Design
-                  </NavLink>
-                  <NavLink
-                    to="/services/digital-marketing"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                  >
-                    Digital Marketing
-                  </NavLink>
-                  <NavLink
-                    to="/services/seo"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                  >
-                    SEO Services
-                  </NavLink>
-                  <NavLink
-                    to="/services/consulting"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                  >
-                    IT Consulting
+                    Zeal LMS
                   </NavLink>
                 </div>
               </div>
             </li>
 
-            <li>
+            {/* <li>
               <NavLink to="/about" className={getNavLinkClass}>
                 About Us
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink to="/contact" className={getNavLinkClass}>
                 Contact
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -266,3 +247,104 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+// import React from "react";
+// import { Link, useNavigate } from "react-router-dom";
+// import logo from "/src/assets/logo.png"; // Adjust the path as necessary
+
+
+// export default function Navbar() {
+//   const navigate = useNavigate();
+
+//   const handleLoginClick = () => {
+//     navigate("/login");
+//   };
+
+//   return (
+//     <div className="navbar navbar-expand-lg py-3 px-0 px-lg-5 px-md-5 vietnam">
+//       <div className="container ">
+//         <div className="navbar-brand">
+//           <img src={logo} alt="Logo" width="80%" />
+//         </div>
+
+//         {/* <button
+//           className="navbar-toggler"
+//           type="button"
+//           data-bs-toggle="collapse"
+//           data-bs-target="#navbarCollapse"
+//         >
+//           <span className="navbar-toggler-icon"></span>
+//         </button> */}
+
+//         <div className="d-flex align-items-end">
+//           <button className="btn btn-primary px-3 get_in_touch_btn me-3 d-lg-none">
+//             Login
+//           </button>
+//           <button
+//             className="navbar-toggler me-0"
+//             type="button"
+//             data-bs-toggle="collapse"
+//             data-bs-target="#navbarCollapse"
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </button>
+//         </div>
+
+//         <div
+//           className="collapse navbar-collapse justify-content-start "
+//           // id="navbarCollapse"
+//         >
+//           <ul className="navbar-nav mb-2 mb-lg-0">
+//             <li className="nav-item px-3">
+//               <Link
+//                 to="/"
+//                 className={({ isActive }) =>
+//                   isActive ? "nav-link active-link" : "nav-link text-black"
+//                 }
+//               >
+//                 Home
+//               </Link>
+//             </li>
+//             <li className="nav-item px-3">
+//               <a
+//                 href="https://zealcatalyst.com/#/explorecourses"
+//                 className={({ isActive }) =>
+//                   isActive ? "nav-link active-link" : "nav-link text-black"
+//                 }
+//               >
+//                 Courses
+//               </a>
+//             </li>
+//             <li className="nav-item px-3">
+//               <a
+//                 href="https://zealcatalyst.com/#/about"
+//                 className={({ isActive }) =>
+//                   isActive ? "nav-link active-link" : "nav-link text-black"
+//                 }
+//               >
+//                 About Us
+//               </a>
+//             </li>
+//             <li className="nav-item px-3">
+//               <a
+//                 href="https://zealcatalyst.com/#/contact"
+//                 className={({ isActive }) =>
+//                   isActive ? "nav-link active-link" : "nav-link text-black"
+//                 }
+//               >
+//                 Contact
+//               </a>
+//             </li>
+//           </ul>
+//         </div>
+//         <button
+//           className="btn btn-primary px-3  d-none d-lg-block"
+//           onClick={handleLoginClick}
+//         >
+//           Login
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
